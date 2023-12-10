@@ -1,3 +1,244 @@
+@font-face {
+    font-family: Satoshi-Variable;
+    src: url(Satoshi-VariableItalic.woff2);
+    src: url(Satoshi-VariableItalic.woff);
+    src: url(Satoshi-Variable.ttf);
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Clash-Grotesque;
+    src: url(ClashGrotesk-Variable.woff2);
+    src: url(ClashGrotesk-Variable.woff);
+    src: url(ClashGrotesk-Variable.ttf);
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+:ROOT{
+    --black : #050401;
+    --maincolor : #863A20;
+    --mainfont : 16px;
+    --satoshi : Satoshi-Variable;
+    --clash : Clash-Grotesque;
+}
+
 body{
-    background-color: aqua;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+p{
+    margin: 0;
+}
+
+#hero-section{
+    width: 100%;
+    height: 752px;
+    background-image: url(hero-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#header{
+    position: absolute;
+    top: 0;
+    width: calc(100% - 140px);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    height: 42px;
+}
+
+nav{
+    display: flex;
+    gap: 10px;
+    font-family: var(--satoshi);
+    color: #CDCDCD;
+    text-align: center;
+    font-size: var(--mainfont);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+nav a:first-child{
+    color: var(--maincolor);
+    font-weight: 700;
+}
+
+#claw{
+    display: flex;
+    gap: 5px;
+}
+
+#claw p{
+    color: var(--maincolor);
+    font-family: var(--clash);
+    font-size: var(--mainfont);
+    font-weight: 600;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}
+
+#herotext{
+    width: 636px;
+    text-align: center;
+    font-family: var(--clash);
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+}
+
+#herotext span{
+    color: var(--maincolor);
+}
+
+#herosub{
+    width: 496px;
+    text-align: center;
+    font-family: var(--satoshi);
+    font-size: var(--mainfont);
+    font-weight: 400;
+}
+
+#check{
+    display: inline-flex;
+    padding: 14px 40px;
+    align-items: flex-start;
+    border-radius: 5px;
+    border: none;
+    background: var(--maincolor);
+    color: white;
+    text-align: center;
+    font-family: var(--satoshi);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+#practice{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    color: var(--maincolor);
+    text-align: center;
+    font-family: var(--clash);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#tsub{
+    color: var(--black);
+    text-align: center;
+    font-family: var(--satoshi);
+    font-size: var(--mainfont);
+    font-weight: 400;
+}
+
+#areas{
+    background-image: url(edge.svg);
+    width: 1164px;
+    height: 482px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#areasbg{
+    background-image: url(areasbg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0px 14px 44px 0px rgba(0, 0, 0, 0.25);
+    width: 1020px;
+    height: 458px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 265px;
+    position: relative;
+    padding: 0 60px;
+    overflow: hidden;
+}
+
+#rightbutton{
+    background: none;
+    border: none;
+}
+
+.left,.right{
+    width: 50px;
+    height: 50px;
+}
+
+#areascontainer{
+    position: absolute;
+    width: 1140px;
+    left: 0;
+    overflow: visible;
+}
+
+#roll{
+    display: flex;
+    align-items: center;
+    gap: 385px;
+    padding-left: 375px;
+    padding-right: 375px;
+    position: relative;
+}
+
+#ccp{
+    display: inline-flex;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 14px 54px 0px rgba(0, 0, 0, 0.10);
+}
+
+#areasicon{
+    width: 54px;
+}
+
+.areastitle{
+    color: var(--black);
+    text-align: center;
+    font-family: var(--clash);
+    font-size: 20px;
+    font-weight: 500;
+    align-self: stretch;
+}
+
+.areassub{
+    color: var(--black);
+    text-align: center;
+    font-family: var(--satoshi);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 350px;
 }
