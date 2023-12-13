@@ -341,6 +341,7 @@ nav a:first-child{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border: none;
 }
 
 #florenceimg{
