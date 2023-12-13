@@ -337,14 +337,15 @@ nav a:first-child{
 }
 
 #lavernimg{
+    background-color: #FFF;
     background-image: url(lavern.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: none;
 }
 
 #florenceimg{
+    background-color: #FFF;
     background-image: url(florence.png);
     background-position: center;
     background-size: cover;
@@ -352,6 +353,7 @@ nav a:first-child{
 }
 
 #redwomanimg{
+    background-color: #FFF;
     background-image: url(redwoman.png);
     background-position: center;
     background-size: cover;
@@ -359,6 +361,7 @@ nav a:first-child{
 }
 
 #dreadimg{
+    background-color: #FFF;
     background-image: url(dread.png);
     background-position: center;
     background-size: cover;
@@ -366,6 +369,7 @@ nav a:first-child{
 }
 
 #prettyimg{
+    background-color: #FFF;
     background-image: url(pretty.png);
     background-position: center;
     background-size: cover;
@@ -373,6 +377,7 @@ nav a:first-child{
 }
 
 #afroimg{
+    background-color: #FFF;
     background-image: url(afro.png);
     background-position: center;
     background-size: cover;
