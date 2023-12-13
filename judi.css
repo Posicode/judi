@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: Clash-Grotesque;
+    font-family: Clash-Grotesk;
     src: url(ClashGrotesk-Variable.woff2);
     src: url(ClashGrotesk-Variable.woff);
     src: url(ClashGrotesk-Variable.ttf);
@@ -23,7 +23,7 @@
     --maincolor : #863A20;
     --mainfont : 16px;
     --satoshi : Satoshi-Variable;
-    --clash : Clash-Grotesque;
+    --clash : Clash-Grotesk;
 }
 
 body{
@@ -171,7 +171,7 @@ nav a:first-child{
     background-position: center;
     background-size: cover;
     border-radius: 20px;
-    box-shadow: 0px 14px 44px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 14px 44px 0px rgba(0, 0, 0, 0.10);
     width: 1020px;
     height: 458px;
     display: flex;
@@ -183,19 +183,21 @@ nav a:first-child{
     overflow: hidden;
 }
 
-#rightbutton{
+#rightbutton, #leftbutton{
     background: none;
     border: none;
+    z-index: 1;
 }
 
 .left,.right{
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
 #areascontainer{
     position: absolute;
-    width: 1140px;
+    /* width: 1140px; */
     left: 0;
     overflow: visible;
 }
@@ -203,7 +205,7 @@ nav a:first-child{
 #roll{
     display: flex;
     align-items: center;
-    gap: 385px;
+    gap: 375px;
     padding-left: 375px;
     padding-right: 375px;
     position: relative;
@@ -217,7 +219,8 @@ nav a:first-child{
     gap: 8px;
     border-radius: 10px;
     background: #FFF;
-    box-shadow: 0px 14px 54px 0px rgba(0, 0, 0, 0.10);
+    width: 390px;
+    box-shadow: 0px 14px 54px 0px rgba(0, 0, 0, 0.05);
 }
 
 #areasicon{
@@ -241,4 +244,248 @@ nav a:first-child{
     font-weight: 400;
     line-height: 24px;
     width: 350px;
+}
+
+#partner{
+    margin-top: 100px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#partner div{
+    display: flex;
+    width: 1065px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#partner div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+#lawyers{
+    margin-top: 100px;
+}
+
+#lawcards{
+    width: calc(100% - 140px);
+    margin: 30px 70px;
+    align-items: center;
+    gap: 50px;
+    display: flex;
+    overflow: auto;
+}
+
+#lawcards::-webkit-scrollbar{
+    display: none;
+}
+
+#cardone{
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+.lawimage{
+    width: 400px;
+    height: 550px;
+    border-radius: 10px;
+    /* box-shadow: 10px 0px 30px 0px rgba(0, 0, 0, 0.15); */
+}
+
+.aboutlaw{
+    background-image: url(aboutlaw.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 400px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.lawname{
+    color: var(--maincolor);
+    font-family: var(--clash);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.lawbody{
+    width: 300px;
+    color: var(--black);
+    text-align: justify;
+    font-family: var(--satoshi);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+#lavernimg{
+    background-image: url(lavern.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#florenceimg{
+    background-image: url(florence.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#redwomanimg{
+    background-image: url(redwoman.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#dreadimg{
+    background-image: url(dread.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prettyimg{
+    background-image: url(pretty.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#afroimg{
+    background-image: url(afro.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes showabout {
+    from{
+        position: relative;
+        left: -400px;
+    }
+
+    to{
+        position: relative;
+        left: -10px;
+    }
+}
+
+@keyframes width {
+    from{
+        width: 400px;
+    }
+
+    to{
+        width: 300px;
+    }
+}
+
+#cardone:hover #lavern{
+    position: relative;
+    left: -10px;
+    animation: showabout 500ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+
+#cardone:hover .lawimage{
+    width: 300px;
+    animation: width 500ms ease;
+}
+
+#reviews{
+    margin-top: 100px;
+}
+
+#reviewscontainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.reviewbox{
+    display: flex;
+    width: 290px;
+    padding: 40px 30px;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    border-radius: 10px;
+    border-left: 3px solid var(--maincolor);
+    background: #FFF;
+    box-shadow: 0px 14px 34px 0px rgba(81, 81, 81, 0.10);
+}
+
+.author{
+    color: var(--black);
+    font-family: var(--satoshi);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mainreview{
+    color: var(--black);
+    font-family: var(--satoshi);
+    font-size: var(--mainfont);
+    font-weight: 400;
+    line-height: 24px;
+    align-self: stretch;
+}
+
+#darlene{
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#dar{
+    text-align: center;
+}
+
+#jane{
+    justify-content: center;
+    align-items:end;
+    border-left: none;
+    border-right: 3px solid var(--maincolor);
+}
+
+#jan{
+    text-align: right;
+}
+
+.maskone{
+    position: absolute;
+    left: 550px;
+    top: 175px;
+    z-index: -1;
+}
+
+.masktwo{
+    position: absolute;
+    right: 550px;
+    top: 175px;
+    z-index: -1;
 }
