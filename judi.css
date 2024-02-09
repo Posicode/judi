@@ -64,6 +64,11 @@ p{
     height: 42px;
 }
 
+#navmenu{
+    display: none;
+    width: 30px;
+}
+
 nav{
     display: flex;
     gap: 10px;
@@ -266,6 +271,10 @@ nav a:first-child{
     height: 100px;
     border-radius: 50px;
     box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+#hrone{
+    
 }
 
 #lawyers{
@@ -643,4 +652,151 @@ footer{
     line-height: 18px;
     position: absolute;
     bottom: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    :ROOT{
+        --mainfont : 14px;
+    }
+
+    #hero-section{
+        height: 667px;
+        background-image: url(bgtwo.png);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #header nav{
+        display: none;
+    }
+
+    #header{
+        position: absolute;
+        top: 0;
+        width: calc(100% - 48px);
+        margin-top: 24px;
+    }
+
+    #logo{
+        height: 32px;
+    }
+
+    #navmenu{
+        display: block;
+    }
+
+    #claw{
+        display: none;
+    }
+
+    #herotext{
+        font-size: 24px;
+        width: calc(100% - 48px);
+    }
+
+    #herosub{
+        width: calc(100% - 48px);
+    }
+
+    #check{
+        font-size: 12px;
+    }
+
+
+    /* Practice section */
+    #title{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #areas{
+        background-image: none;
+        width: auto;
+        height: auto;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    #areasbg{
+        background-image: none;
+        box-shadow: none;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 265px;
+        position: relative;
+        padding: 0 60px;
+        overflow: auto;
+    }
+
+    #rightbutton, #leftbutton{
+        display: none;
+    }
+
+    #areascontainer{
+        position: relative;
+    }
+    
+    #roll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+    }
+
+    #ccp{
+        width: auto;
+    }
+
+    #areasicon{
+        width: 34px;
+    }
+
+    .areastitle{
+        font-size: 18px;
+    }
+
+    .areassub{
+        font-size: var(--mainfont);
+        font-weight: 400;
+        line-height: 21px;
+        width: 300px;
+    }
+
+    #partner{
+        margin-top: 100px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #partner #title{
+        display: none;
+    }
+    
+    #partner div{
+        display: flex;
+        width: 100%;
+        padding-left: 30px;
+        justify-content: flex-start;
+        gap: 40px;
+        align-items: center;
+        height: 90px;
+        background-color: red;
+    }
+    
+    #partner div img{
+        width: 50px;
+        height: 50px;
+    }
 }
